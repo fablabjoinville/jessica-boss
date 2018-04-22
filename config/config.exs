@@ -7,7 +7,8 @@ use Mix.Config
 
 # General application configuration
 config :jessica_boss,
-  ecto_repos: [JessicaBoss.Repo]
+  ecto_repos: [JessicaBoss.Repo],
+  heroku_url: 'https://change-it-later.heroku-app.com'
 
 # Configures the endpoint
 config :jessica_boss, JessicaBossWeb.Endpoint,

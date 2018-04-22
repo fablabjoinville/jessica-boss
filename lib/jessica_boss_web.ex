@@ -26,32 +26,11 @@ defmodule JessicaBossWeb do
     end
   end
 
-  def view do
-    quote do
-      use Phoenix.View, root: "lib/jessica_boss_web/templates",
-                        namespace: JessicaBossWeb
-
-      # Import convenience functions from controllers
-      import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
-
-      import JessicaBossWeb.Router.Helpers
-      import JessicaBossWeb.ErrorHelpers
-      import JessicaBossWeb.Gettext
-    end
-  end
-
-  def router do
+   def router do
     quote do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
-    end
-  end
-
-  def channel do
-    quote do
-      use Phoenix.Channel
-      import JessicaBossWeb.Gettext
     end
   end
 

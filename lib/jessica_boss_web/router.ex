@@ -5,7 +5,9 @@ defmodule JessicaBossWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", JessicaBossWeb do
+  scope "/", JessicaBossWeb do
     pipe_through :api
+
+    get "/auth_rfid", AppController, :auth_rfid
   end
 end

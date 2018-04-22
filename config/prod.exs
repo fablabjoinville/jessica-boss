@@ -61,4 +61,8 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
-import_config "prod.secret.exs"
+
+# Configure your database
+config :jessica_boss, JessicaBoss.Repo,
+  adapter: Sqlite.Ecto2,
+  database: "jessica_boss_prod.sqlite3"
