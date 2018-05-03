@@ -38,5 +38,10 @@ config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
 config :jessica_boss, JessicaBoss.Repo,
-  adapter: Sqlite.Ecto2,
-  database: "jessica_boss_dev.sqlite3"
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "jessica_boss_dev",
+  hostname: "localhost",
+  migration_timestamps: [type: :utc_datetime],
+  pool_size: 10

@@ -33,7 +33,6 @@ defmodule JessicaBoss.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:sqlite_ecto2, "~> 2.2"},
       {:phoenix, "~> 1.3.0"},
       {:phoenix_pubsub, "~> 1.0"},
       {:phoenix_ecto, "~> 3.2"},
@@ -42,7 +41,6 @@ defmodule JessicaBoss.Mixfile do
       {:cowboy, "~> 1.0"},
       {:poison, "~> 3.1"},
       {:httpotion, "~> 3.1.0"},
-      {:mock, "~> 0.3.0", only: :test}
     ]
   end
 

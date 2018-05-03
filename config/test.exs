@@ -11,7 +11,9 @@ config :logger, level: :warn
 
 # Configure your database
 config :jessica_boss, JessicaBoss.Repo,
-  adapter: Sqlite.Ecto2,
-  database: "jessica_boss_dev.sqlite3",
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "jessica_boss_test",
+  hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
-
