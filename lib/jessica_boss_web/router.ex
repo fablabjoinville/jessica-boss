@@ -8,6 +8,6 @@ defmodule JessicaBossWeb.Router do
   scope "/", JessicaBossWeb do
     pipe_through :api
 
-    get "/rfids", AppController, :rsids
+    get "/rfids", AppController, :rfids
   end
 end

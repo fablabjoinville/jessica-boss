@@ -1,7 +1,10 @@
 defmodule JessicaBossWeb.AppController do
   use JessicaBossWeb, :controller
 
-  def rfids(conn) do
-    conn |> send_resp(200, "TODO")
+  alias JessicaBossWeb.UserModel
+
+  def rfids(conn, params) do
+    users = UserModel.all([:rfid, :deleted_at])
+    json conn, %{users: users}
   end
 end

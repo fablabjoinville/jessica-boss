@@ -1,5 +1,6 @@
 defmodule JessicaBossWeb.UserModel do
   import Ecto.Changeset
+  import Ecto.Query
 
   alias JessicaBoss.Repo
 
@@ -14,6 +15,18 @@ defmodule JessicaBossWeb.UserModel do
 
       timestamps()
     end
+  end
+
+  def all do
+    query = from u in Schema,
+              select: map(u, [:first_name, :last_name, :rfid, :deleted_at])
+    Repo.all(query)
+  end
+
+  def all(fields) do
+    query = from u in Schema,
+              select: map(u, ^fields)
+    Repo.all(query)
   end
 
   def insert!(params) do
